@@ -1,0 +1,118 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 80vh;
+  padding: 60px 10%;
+  gap: 40px;
+}
+
+/* Text Content Side */
+.hero-content {
+  flex: 1;
+}
+
+.hero-content h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(3rem, 8vw, 5rem); /* Responsive font sizing */
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 450px;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* Button & Socials */
+.cta-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  color: #000;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.2s;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icon {
+  width: 45px;
+  height: 45px;
+  background-color: var(--social-bg);
+  color: var(--accent-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background 0.3s;
+}
+
+.social-icon:hover {
+  background-color: #333;
+}
+
+/* Image Side */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  background-color: #b0b0b0; /* Matching the grey photo background */
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column-reverse; /* Text goes below image on mobile */
+    text-align: center;
+    padding: 40px 5%;
+  }
+
+  .hero-content p {
+    margin: 0 auto 40px;
+  }
+
+  .cta-group {
+    justify-content: center;
+  }
+
+  .hero-image {
+    justify-content: center;
+  }
+}

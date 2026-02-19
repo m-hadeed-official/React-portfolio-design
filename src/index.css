@@ -1,0 +1,23 @@
+:root {
+  --bg-color: #0a0a0a;
+  --accent-color: #d4f06d; /* The lime green color */
+  --text-main: #ffffff;
+  --text-muted: #a0a0a0;
+  --social-bg: #1a1a1a;
+  --card-bg: #1a1a1a;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: "Inter", sans-serif;
+  color: var(--text-main);
+}
+hr {
+  background: linear-gradient(var(--accent-color), var(--bg-color));
+  opacity: 0.2;
+}

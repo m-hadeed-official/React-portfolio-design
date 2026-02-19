@@ -1,0 +1,130 @@
+/* Reusing your variables */
+
+.projects {
+  padding: 100px 10%;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+}
+
+.projects-header {
+  margin-bottom: 80px;
+}
+
+.projects-header h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 15px;
+}
+
+.projects-header p {
+  color: var(--text-muted);
+  max-width: 500px;
+}
+
+/* Individual Card Layout */
+.project-card {
+  display: flex;
+  gap: 60px;
+  margin-bottom: 120px;
+  align-items: center;
+}
+
+.project-image {
+  flex: 1;
+  background-color: var(--card-bg);
+  padding: 40px;
+  border-radius: 12px;
+  position: relative;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: #333;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  color: #fff;
+}
+
+.project-info {
+  flex: 1;
+}
+
+.project-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.project-info p {
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Meta Table Styling */
+.project-meta {
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  margin-bottom: 30px;
+}
+
+.meta-label {
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 15px !important;
+  color: var(--text-main) !important;
+}
+
+.meta-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #222;
+  font-size: 0.9rem;
+}
+
+/* Action Links */
+.project-links {
+  display: flex;
+  gap: 25px;
+}
+
+.link-btn {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 4px;
+  transition: 0.3s;
+}
+
+.link-btn:hover {
+  opacity: 0.7;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+  .project-card {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .projects {
+    padding: 60px 5%;
+  }
+
+  .project-image {
+    padding: 20px;
+  }
+}

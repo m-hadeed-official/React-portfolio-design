@@ -1,0 +1,80 @@
+/* Reusing your variables */
+
+.skills {
+  background-color: var(--bg-color);
+  padding: 100px 10%;
+  color: var(--text-main);
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr; /* Matches the "About Me" layout */
+  gap: 50px;
+  align-items: start;
+}
+
+.skills-title h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  line-height: 1;
+  margin: 0;
+}
+
+.skills-description {
+  font-family: "Inter", sans-serif;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 500px;
+}
+
+/* Skills Grid Layout */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
+  gap: 20px;
+}
+
+.skill-card {
+  background-color: var(--card-bg);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #222;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.skill-card h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+/* Hover Effect: Border changes to your accent color */
+.skill-card:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-5px);
+}
+
+.skill-card:hover h3 {
+  color: var(--accent-color);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+  .skills-container {
+    grid-template-columns: 1fr; /* Stack vertically */
+    gap: 30px;
+  }
+
+  .skills {
+    padding: 60px 5%;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr; /* 1 column on smaller mobile */
+  }
+}

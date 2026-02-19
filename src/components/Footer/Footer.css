@@ -1,0 +1,104 @@
+.contact {
+  background-color: var(--bg-color);
+  padding: 100px 10% 40px;
+  color: var(--text-main);
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* Two-column wrapper for text and image */
+.contact-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.contact-info {
+  flex: 2;
+  display: flex;
+  flex-flow: column;
+  gap: 50px;
+}
+.contact-info-para {
+  display: flex;
+  flex-flow: column;
+  gap: 30px;
+}
+
+.contact-info h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(3rem, 7vw, 4.5rem);
+
+  letter-spacing: 1px;
+}
+
+.contact-text {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.highlight-link {
+  color: var(--text-main);
+  text-decoration: none;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 2px;
+  transition: color 0.3s ease;
+  font-size: 2rem;
+}
+
+.highlight-link:hover {
+  color: var(--accent-color);
+}
+
+.social-icons {
+  display: flex;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.social-icons a {
+  color: var(--accent-color);
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+/* Small Profile Image Styling */
+.contact-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contact-image img {
+  width: 100%;
+  border-radius: 15px; /* Matches your hero image style */
+  object-fit: cover;
+  background-color: #333; /* Placeholder color */
+  filter: grayscale(20%); /* Optional: subtle style choice */
+}
+
+.footer-bottom {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .contact-main {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .contact-image {
+    justify-content: flex-start; /* Aligns image with text on mobile */
+  }
+  .highlight-link {
+    font-size: 1.5rem;
+  }
+}

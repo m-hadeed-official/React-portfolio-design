@@ -31,10 +31,12 @@
   font-family: "Inter", sans-serif;
   font-size: 16px;
   transition: color 0.3s ease;
+  padding: 5px 8px;
 }
 
 .nav-links a:hover {
-  color: #ffffff; /* Subtle hover effect */
+  color: var(--accent-color); /* Subtle hover effect */
+  border-bottom: 3px solid var(--accent-color);
 }
 /* Hide the checkbox */
 #nav-check {
